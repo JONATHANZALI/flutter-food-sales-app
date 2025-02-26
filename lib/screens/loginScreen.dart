@@ -59,7 +59,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+        body: SafeArea(
+      child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
@@ -139,8 +140,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Text("Forget your password?"),
                       ),
-                      Spacer(
-                        flex: 2,
+                      const SizedBox(
+                        height: 12,
                       ),
                       Text("or Login With"),
                       const SizedBox(
@@ -207,8 +208,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                      Spacer(
-                        flex: 4,
+                      const SizedBox(
+                        height: 14,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -237,6 +238,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
-    );
+    ));
   }
 }
